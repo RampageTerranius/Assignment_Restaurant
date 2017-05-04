@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AssignmentRestaurant</string>
+    <string name="LoginPage_Login">Login: </string>
+    <string name="LoginPage_LoginButton">Login</string>
+    <string name="LoginPage_Password">Password: </string>
+    <string name="LoginPage_UserName">User: </string>
+    <string name="LoginPage_IncorrectLoginDetails">Username/Password do not match</string>
+    <string name="LoginPage_CorrectLoginDetails">Logging in...</string>
+</resources>
