@@ -34,7 +34,11 @@ public class MainActivity_LoginPage extends AppCompatActivity {
                 for (Login u : users) {
                     if (u.getUser().equals(lUser.getText().toString())) {
                         if (u.getPassword().equals(lPass.getText().toString()))
+                        {
                             ((TextView) findViewById(R.id.tv_loginText)).setText(R.string.LoginPage_CorrectLoginDetails);
+                            return;
+                        }
+
                     }
                     else
                         ((TextView) findViewById(R.id.tv_loginText)).setText(R.string.LoginPage_IncorrectLoginDetails);

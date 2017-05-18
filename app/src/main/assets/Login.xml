@@ -8,4 +8,8 @@
         <UserName>derp</UserName>
         <Password>yep</Password>
     </User>
+    <User>
+        <UserName>guy</UserName>
+        <Password>man</Password>
+    </User>
 </Login>

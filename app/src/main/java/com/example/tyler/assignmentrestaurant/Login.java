@@ -9,8 +9,8 @@ public class Login {
     private String password;
 
     public Login(String pUser, String pPassword) {
-        user = pUser;
-        password = pPassword;
+        setUser(pUser);
+        setPassword(pPassword);
     }
 
     public void setUser(String pUser) {

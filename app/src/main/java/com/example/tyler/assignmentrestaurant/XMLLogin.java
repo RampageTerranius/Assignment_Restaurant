@@ -63,8 +63,6 @@ public class XMLLogin extends XMLHandle {
         return stringWriter.toString();
     }
 
-    // Parses the contents of a person. If it encounters a name or age tag, hands them off
-    // to their respective "read" methods for processing. Otherwise, skips the tag.
     private Login readLogin(XmlPullParser parser) throws XmlPullParserException, IOException {
         parser.require(XmlPullParser.START_TAG, null, "User");
         String user = null;
