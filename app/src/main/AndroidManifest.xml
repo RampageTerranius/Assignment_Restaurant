@@ -15,6 +15,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".FragmentMenu" />
+        <activity android:name=".Order" />
+        <activity
+            android:name=".MenuOrder"
+            android:label="@string/title_activity_menu_order"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

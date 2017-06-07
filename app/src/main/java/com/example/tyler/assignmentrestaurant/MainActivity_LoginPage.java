@@ -1,5 +1,6 @@
 package com.example.tyler.assignmentrestaurant;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,7 +22,7 @@ public class MainActivity_LoginPage extends AppCompatActivity {
         users = new ArrayList();
         XMLHandle xmlLogin = new XMLLogin();
         xmlLogin.setContext(this);
-        users = xmlLogin.parseAsset("Login.xml");
+        users = xmlLogin.parseAsset("User.xml");
         if (xmlLogin.getError() != "")
             Log.d(MainActivity_LoginPage.class.getSimpleName(), xmlLogin.getError());
     }
@@ -36,9 +37,9 @@ public class MainActivity_LoginPage extends AppCompatActivity {
                         if (u.getPassword().equals(lPass.getText().toString()))
                         {
                             ((TextView) findViewById(R.id.tv_loginText)).setText(R.string.LoginPage_CorrectLoginDetails);
+                            openMenuActivity(lUser.getText().toString());
                             return;
                         }
-
                     }
                     else
                         ((TextView) findViewById(R.id.tv_loginText)).setText(R.string.LoginPage_IncorrectLoginDetails);
@@ -55,5 +56,13 @@ public class MainActivity_LoginPage extends AppCompatActivity {
                 p.setText("");
                 break;
         }
+    }
+
+    public void openMenuActivity(String user) {
+        Intent intent = new Intent(this, MenuOrder.class);
+
+        intent.putExtra("data", user);
+
+        startActivity(intent);
     }
 }

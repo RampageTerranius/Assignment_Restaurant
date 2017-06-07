@@ -3,5 +3,8 @@
     <Meal>
         <Name></Name>
         <Image></Image>
+        <Cost></Cost>
+        <Vegetarian></Vegetarian>
+
     </Meal>
 </Menu>
